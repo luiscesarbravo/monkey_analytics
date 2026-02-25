@@ -1,60 +1,45 @@
-##### \# Monkey Analytics
+# Monkey Analytics
 
-##### 
+Pipeline personal para migrar datos operativos desde Excel hacia un stack analítico reproducible.
 
-##### Pipeline personal para migrar datos operativos desde Excel hacia un stack analítico reproducible.
+---
 
-##### 
+## Objetivo
 
-##### \## Objetivo
+Construir un pipeline **Excel → Python (pandas) → PostgreSQL** y, en una fase posterior, llevarlo a **AWS** (S3 + Glue/Athena).
 
-##### Construir un pipeline \*\*Excel → Python (pandas) → PostgreSQL\*\* y, en una fase posterior, llevarlo a \*\*AWS\*\* (S3 + Glue/Athena).
+---
 
-##### 
+## Stack
 
-##### \## Stack
+- Python (pandas)
+- SQLAlchemy + psycopg2
+- PostgreSQL
+- Git/GitHub
 
-##### \- Python (pandas)
+---
 
-##### \- SQLAlchemy + psycopg2
+## Estructura del repo
 
-##### \- PostgreSQL
+- `data/`: datasets locales (raw/staging/processed). `data/raw` se ignora en Git.
+- `src/`: código del pipeline (etl/db/utils)
+- `notebooks/`: exploración y prototipos
+- `docs/`: notas técnicas y documentación
 
-##### \- Git/GitHub
+---
 
-##### 
+## Estado actual
 
-##### \## Estructura del repo
+- Repo inicial creado y sincronizado con GitHub
+- Entorno virtual fuera del repo (`venv_monkey`)
+- Dependencias registradas en `requirements.txt`
+- Datos Excel disponibles localmente en `data/raw` (no versionados)
 
-##### \- `data/`: datasets locales (raw/staging/processed). `data/raw` se ignora en Git.
+---
 
-##### \- `src/`: código del pipeline (etl/db/utils)
+## Próximos pasos
 
-##### \- `notebooks/`: exploración y prototipos
-
-##### \- `docs/`: notas técnicas y documentación
-
-##### 
-
-##### \## Estado actual
-
-##### \- Repo inicial creado y sincronizado con GitHub
-
-##### \- Entorno virtual fuera del repo (`venv\_monkey`)
-
-##### \- Dependencias registradas en `requirements.txt`
-
-##### \- Datos Excel disponibles localmente en `data/raw` (no versionados)
-
-##### 
-
-##### \## Próximos pasos
-
-##### 1\. Leer `data/raw/BD\_MonkeyPapas.xlsx` con pandas y validar schema
-
-##### 2\. Definir modelo relacional en PostgreSQL
-
-##### 3\. Cargar a staging/processed y automatizar ETL
-
-##### 4\. Extender a AWS (S3 + Glue/Athena)
-
+1. Leer `data/raw/BD_MonkeyPapas.xlsx` con pandas y validar schema
+2. Definir modelo relacional en PostgreSQL
+3. Cargar a staging/processed y automatizar ETL
+4. Extender a AWS (S3 + Glue/Athena)
