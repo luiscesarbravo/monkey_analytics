@@ -1,6 +1,9 @@
+# Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .env
+
+# Data (no subir datos crudos ni staging)
 data/raw/*
 data/staging/*
