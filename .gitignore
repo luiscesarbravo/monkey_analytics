@@ -6,4 +6,6 @@ __pycache__/
 
 # Data (no subir datos crudos ni staging)
 data/raw/*
+!data/raw/.gitkeep
 data/staging/*
+!data/staging/.gitkeep
